@@ -1,0 +1,25 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>VerioCheck Client-Side Example</title>
+  <meta name="description" content="An example of VerioCheck API call from client-side javascript">
+  <!--   <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
+</head>
+
+<body>
+  <script src="./veriocheck-1.0.0.min.js"></script>
+  <script>
+		window.onload = function() {
+		  
+			var veriocheck = new VerioCheck("YOUR_PRIVATE_KEY","YOUR_AUTH_CODE");
+
+			var inputNameParams = {"fname": "jjohni", "lname": "doe"};
+			veriocheck.nameCheck(inputNameParams, function(err, res){
+					console.log(err,res);
+			});
+		};
+  </script>
+</body>
+</html>
